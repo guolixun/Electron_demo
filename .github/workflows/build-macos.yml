@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '20.18.0'
 
-	  - name: Install yarn
+      - name: Install yarn
         run: npm install -g yarn
 
       - name: Install dependencies
@@ -34,4 +34,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: macos-dmg
-          path: dist/mac/*.dmg
+          path: dist/*.dmg
