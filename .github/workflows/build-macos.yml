@@ -21,11 +21,14 @@ jobs:
         with:
           node-version: '20.18.0'
 
+	  - name: Install yarn
+        run: npm install -g yarn
+
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: Build Electron app
-        run: npm run build:mac
+        run: yarn build:mac
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
